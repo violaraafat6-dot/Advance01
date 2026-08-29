@@ -90,20 +90,34 @@ namespace Advance01
 
             #region question12
 
-//            Multiple constraints can be applied to the same generic type using where
+            //            Multiple constraints can be applied to the same generic type using where
 
-//class Example<T> where T : class, IPrintable, new()
-//        {
-//            public T Create()
-//            {
-//                return new T();
-//            }
-//        }
+            //class Example<T> where T : class, IPrintable, new()
+            //        {
+            //            public T Create()
+            //            {
+            //                return new T();
+            //            }
+            //        }
 
-//        Here T must:
-//-Be a reference type
-//-Implement IPrintable
-// -Have a public parameterless constructor
+            //        Here T must:
+            //-Be a reference type
+            //-Implement IPrintable
+            // -Have a public parameterless constructor
+            #endregion
+
+            #region question13
+
+//            The default keyword returns the default value of the generic type
+
+//            ex
+//T value = default(T);
+//            //
+//            The default value depends on the type:
+
+//            For int, the default value is 0
+//For bool, the default value is false
+//For reference types such as string, the default value is null
             #endregion
         }
     }
