@@ -1,4 +1,5 @@
 ﻿using System.Buffers;
+using System.Reflection.Metadata;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Advance01
@@ -221,69 +222,160 @@ namespace Advance01
 
             #region question20
 
-        //    class Cache<TKey, TValue>
-        //{
-        //    private class CacheItem
-        //    {
-        //        public TValue Value { get; set; }
-        //        public DateTime ExpirationTime { get; set; }
-        //    }
+            //    class Cache<TKey, TValue>
+            //{
+            //    private class CacheItem
+            //    {
+            //        public TValue Value { get; set; }
+            //        public DateTime ExpirationTime { get; set; }
+            //    }
 
-        //    private Dictionary<TKey, CacheItem> items =
-        //        new Dictionary<TKey, CacheItem>();
+            //    private Dictionary<TKey, CacheItem> items =
+            //        new Dictionary<TKey, CacheItem>();
 
-        //    public void Add(TKey key, TValue value, TimeSpan expiration)
-        //    {
-        //        CacheItem item = new CacheItem();
+            //    public void Add(TKey key, TValue value, TimeSpan expiration)
+            //    {
+            //        CacheItem item = new CacheItem();
 
-        //        item.Value = value;
-        //        item.ExpirationTime = DateTime.Now.Add(expiration);
+            //        item.Value = value;
+            //        item.ExpirationTime = DateTime.Now.Add(expiration);
 
-        //        items[key] = item;
-        //    }
+            //        items[key] = item;
+            //    }
 
-        //    public TValue Get(TKey key)
-        //    {
-        //        if (!items.ContainsKey(key))
-        //            return default(TValue);
+            //    public TValue Get(TKey key)
+            //    {
+            //        if (!items.ContainsKey(key))
+            //            return default(TValue);
 
-        //        CacheItem item = items[key];
+            //        CacheItem item = items[key];
 
-        //        if (DateTime.Now > item.ExpirationTime)
-        //        {
-        //            items.Remove(key);
-        //            return default(TValue);
-        //        }
+            //        if (DateTime.Now > item.ExpirationTime)
+            //        {
+            //            items.Remove(key);
+            //            return default(TValue);
+            //        }
 
-        //        return item.Value;
-        //    }
+            //        return item.Value;
+            //    }
 
-        //    public void Remove(TKey key)
-        //    {
-        //        if (items.ContainsKey(key))
-        //        {
-        //            items.Remove(key);
-        //        }
-        //    }
+            //    public void Remove(TKey key)
+            //    {
+            //        if (items.ContainsKey(key))
+            //        {
+            //            items.Remove(key);
+            //        }
+            //    }
 
-        //    public bool Contains(TKey key)
-        //    {
-        //        if (!items.ContainsKey(key))
-        //            return false;
+            //    public bool Contains(TKey key)
+            //    {
+            //        if (!items.ContainsKey(key))
+            //            return false;
 
-        //        CacheItem item = items[key];
+            //        CacheItem item = items[key];
 
-        //        if (DateTime.Now > item.ExpirationTime)
-        //        {
-        //            items.Remove(key);
-        //            return false;
-        //        }
+            //        if (DateTime.Now > item.ExpirationTime)
+            //        {
+            //            items.Remove(key);
+            //            return false;
+            //        }
 
-        //        return true;
-        //    }
-        //}
+            //        return true;
+            //    }
+            //}
 
             #endregion
-    }
+
+            #region search in&out
+
+
+//            in and out in Generics – C#
+
+//In C#, the in and out keywords are used with Generic Interfaces and Delegates. They are related to Generic Variance.
+
+//There are two types:
+
+//            1. out – Covariance
+
+//            The out keyword is used when the generic type T is used as an output.
+
+//It means that T can be returned from a method, but it cannot be used as an input parameter.
+
+//Example:
+
+//interface IProducer<out T>
+//        {
+//            T Get();
+//        }
+
+//        Here, T is used as a return type, so we can use out.
+
+//Example:
+
+//IProducer<string> stringProducer = ...;
+//        IProducer<object> objectProducer = stringProducer;
+
+//        This is allowed because string is derived from object.
+
+//        So, a Producer of string can be treated as a Producer of object.
+
+//In short:
+
+//out = T comes out of the generic.
+
+//Producer<string>->Producer<object>
+
+
+//2. in – Contravariance
+
+//The in keyword is used when the generic type T is used as an input.
+
+//It means that T can be used as a method parameter, but it cannot be used as a return type.
+
+//Example:
+
+//interface IConsumer<in T>
+//        {
+//            void Consume(T value);
+//        }
+
+//        Here, T is used as a parameter, so we use in.
+
+//Example:
+
+//IConsumer<object> objectConsumer = ...;
+//        IConsumer<string> stringConsumer = objectConsumer;
+
+//        This is allowed because an object can accept a string.
+
+//        So, a Consumer of object can be treated as a Consumer of string.
+
+//In short:
+
+//in = T goes into the generic.
+
+//Consumer<object>->Consumer<string>
+
+
+//The difference:
+
+//out = Covariance = Output = Producer
+
+//in = Contravariance = Input = Consumer
+
+
+//Why do we use in and out?
+
+//They allow compatible conversions between generic types while maintaining type safety.
+
+//Important:
+
+//The in and out keywords here are not the same as the in and out keywords used with method parameters.
+
+//Here, they are used with generic type parameters in interfaces and delegates.
+
+
+            #endregion
+        }
     }
 }
