@@ -22,16 +22,27 @@ namespace Advance01
 
             #region question4
 
-//            A generic method is a method that has its own type parameter and can work with different data types
+            //            A generic method is a method that has its own type parameter and can work with different data types
 
-//static void Swap<T>(ref T first, ref T second)
-//            {
-//                T temp = first;
-//                first = second;
-//                second = temp;
-//            }
+            //static void Swap<T>(ref T first, ref T second)
+            //            {
+            //                T temp = first;
+            //                first = second;
+            //                second = temp;
+            //            }
 
 
+            #endregion
+
+            #region question5
+
+            //static T FindMax<T>(T first, T second) where T : IComparable<T>
+            //{
+            //    if (first.CompareTo(second) > 0)
+            //        return first;
+
+            //    return second;
+            //}
             #endregion
         }
     }
