@@ -145,16 +145,33 @@ namespace Advance01
 
             #region question15
 
-//            Covariance allows a more specific type to be used where a more general type is expected
+            //            Covariance allows a more specific type to be used where a more general type is expected
 
-//The out keyword is used for covariance in generic interfaces and delegates
+            //The out keyword is used for covariance in generic interfaces and delegates
 
-//interface IProducer<out T>
+            //interface IProducer<out T>
+            //        {
+            //            T Get();
+            //        }
+
+            #endregion
+
+            #region question16
+
+//            Contravariance allows a more general type to be used where a more specific type is expected
+
+//The in keyword is used for contravariance
+
+//interface IConsumer<in T>
 //        {
-//            T Get();
+//            void Consume(T item);
 //        }
 
-        #endregion
+//        Here T is used as an input type.
+
+//        For example, a consumer of object can be used where a consumer of string is expected because string is an object
+
+            #endregion
     }
     }
 }
