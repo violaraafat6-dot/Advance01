@@ -1,4 +1,5 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+﻿using System.Buffers;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Advance01
 {
@@ -68,24 +69,42 @@ namespace Advance01
 
             #region question11
 
-//            A base class constraint means that the generic type must inherit from a specific base class
+            //            A base class constraint means that the generic type must inherit from a specific base class
 
-//class Animal
-//        {
-//            public void Eat()
-//            {
-//                Console.WriteLine("Eating");
-//            }
-//        }
+            //class Animal
+            //        {
+            //            public void Eat()
+            //            {
+            //                Console.WriteLine("Eating");
+            //            }
+            //        }
 
-//        class AnimalContainer<T> where T : Animal
-//        {
-//            public void MakeAnimalEat(T animal)
-//            {
-//                animal.Eat();
-//            }
-//        }
+            //        class AnimalContainer<T> where T : Animal
+            //        {
+            //            public void MakeAnimalEat(T animal)
+            //            {
+            //                animal.Eat();
+            //            }
+            //        }
             #endregion
-    }
+
+            #region question12
+
+//            Multiple constraints can be applied to the same generic type using where
+
+//class Example<T> where T : class, IPrintable, new()
+//        {
+//            public T Create()
+//            {
+//                return new T();
+//            }
+//        }
+
+//        Here T must:
+//-Be a reference type
+//-Implement IPrintable
+// -Have a public parameterless constructor
+            #endregion
+        }
     }
 }
