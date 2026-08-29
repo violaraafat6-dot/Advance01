@@ -174,13 +174,30 @@ namespace Advance01
             #endregion
             #region question17
 
-//            Covariance
-//Uses out/ Works with output values / Allows more specific type / Example: IProducer <out T >
-//Contravariance
-//Uses in/ Works with input/ Allows more general type / Example: IConsumer <in T >
+            //            Covariance
+            //Uses out/ Works with output values / Allows more specific type / Example: IProducer <out T >
+            //Contravariance
+            //Uses in/ Works with input/ Allows more general type / Example: IConsumer <in T >
 
-//So, covariance is related to producing / returning values, while contravariance is related to consuming / accepting values
+            //So, covariance is related to producing / returning values, while contravariance is related to consuming / accepting values
             #endregion
-        }
+
+            #region question18
+
+//            Static members in a generic type are 
+//separate for each closed generic type
+//ex
+
+//class Counter<T>
+//        {
+//            public static int Count;
+
+//            public Counter()
+//            {
+//                Count++;
+//            }
+//        }
+        #endregion
+    }
     }
 }
