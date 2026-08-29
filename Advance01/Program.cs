@@ -108,17 +108,40 @@ namespace Advance01
 
             #region question13
 
-//            The default keyword returns the default value of the generic type
+            //            The default keyword returns the default value of the generic type
 
-//            ex
-//T value = default(T);
-//            //
-//            The default value depends on the type:
+            //            ex
+            //T value = default(T);
+            //            //
+            //            The default value depends on the type:
 
-//            For int, the default value is 0
-//For bool, the default value is false
-//For reference types such as string, the default value is null
+            //            For int, the default value is 0
+            //For bool, the default value is false
+            //For reference types such as string, the default value is null
             #endregion
-        }
+
+            #region question14
+
+        //    class SafeList<T>
+        //{
+        //    private List<T> items = new List<T>();
+
+        //    public void Add(T item)
+        //    {
+        //        items.Add(item);
+        //    }
+
+        //    public T Get(int index)
+        //    {
+        //        if (index >= 0 && index < items.Count)
+        //        {
+        //            return items[index];
+        //        }
+
+        //        return default(T);
+        //    }
+        //}
+            #endregion
+    }
     }
 }
