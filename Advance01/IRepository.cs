@@ -8,13 +8,27 @@ namespace Advance01
     #region question6
 
 
-//    A generic interface is an interface that uses a type parameter so it can work with different data types
+    //    A generic interface is an interface that uses a type parameter so it can work with different data types
 
-//interface IRepository<T>
+    //interface IRepository<T>
+    //    {
+    //        void Add(T item);
+    //        T Get(int id);
+    //    }
+
+    #endregion
+
+    #region question7
+
+//    The struct constraint means that the generic type must be a value type
+
+//class Example<T> where T : struct
 //    {
-//        void Add(T item);
-//        T Get(int id);
+//        public T Value { get; set; }
 //    }
+///
+//Example<int> example = new Example<int>();
+
 
     #endregion
 }
