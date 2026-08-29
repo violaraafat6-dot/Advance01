@@ -36,4 +36,11 @@ namespace Advance01
     //}
 
     #endregion
+
+    #region question3
+
+    //i forget to write this part
+
+    //    Multiple type parameters mean that a generic class or method can work with more than one type
 }
+    #endregion
