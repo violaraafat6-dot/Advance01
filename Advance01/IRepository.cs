@@ -37,36 +37,39 @@ namespace Advance01
     #region question8
 
 
-//    The class constraint means that the generic type must be a reference type
+    //    The class constraint means that the generic type must be a reference type
 
-//class Example<T> where T : class
-//    {
-//        public T Value { get; set; }
-//}
-//Another ex
+    //class Example<T> where T : class
+    //    {
+    //        public T Value { get; set; }
+    //}
+    //Another ex
 
-//public class Repository<T> where T. class
-//    {
-//        public T Item(get; set; }
-//public Repository(T item)
-//        {
-//            Item = item;
-//        }
-//    }
-//class Person
-//{
-//    public string Name(get; set; )
-//}
-//class Program
-//{
-//    static void Main()
-//var r1 = new Repository<string>("Hello": );
-//    Var r2 = new
-//    Repository<Person>(new Person { Name = "Al1" });
-//}
-//}
+    //public class Repository<T> where T. class
+    //    {
+    //        public T Item(get; set; }
+    //public Repository(T item)
+    //        {
+    //            Item = item;
+    //        }
+    //    }
+    //class Person
+    //{
+    //    public string Name(get; set; )
+    //}
+    //class Program
+    //{
+    //    static void Main()
+    //var r1 = new Repository<string>("Hello": );
+    //    Var r2 = new
+    //    Repository<Person>(new Person { Name = "Al1" });
+    //}
+    //}
 
 
 
     #endregion
-}
+
+  
+   }
+

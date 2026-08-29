@@ -44,6 +44,27 @@ namespace Advance01
             //    return second;
             //}
             #endregion
+
+            #region question9
+
+            //سوري كل ده بجاوب ف interface ورفعتهم وانا مش واخده بالي ملحقتش امسحهم
+
+            //    The new () constraint means that the type must have a public parameterless constructor
+
+            //class Factory<T> where T : new()
+            //    {
+            //        public T Create()
+            //        {
+            //            return new T();
+            //        }
+            //}
+            //ex
+            //Factory<MyClass> factory = new Factory<MyClass>();
+
+            //        MyClass obj = factory.Create();
+
+
+            #endregion
         }
     }
 }
