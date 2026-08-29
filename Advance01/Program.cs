@@ -122,26 +122,39 @@ namespace Advance01
 
             #region question14
 
-        //    class SafeList<T>
-        //{
-        //    private List<T> items = new List<T>();
+            //    class SafeList<T>
+            //{
+            //    private List<T> items = new List<T>();
 
-        //    public void Add(T item)
-        //    {
-        //        items.Add(item);
-        //    }
+            //    public void Add(T item)
+            //    {
+            //        items.Add(item);
+            //    }
 
-        //    public T Get(int index)
-        //    {
-        //        if (index >= 0 && index < items.Count)
-        //        {
-        //            return items[index];
-        //        }
+            //    public T Get(int index)
+            //    {
+            //        if (index >= 0 && index < items.Count)
+            //        {
+            //            return items[index];
+            //        }
 
-        //        return default(T);
-        //    }
-        //}
+            //        return default(T);
+            //    }
+            //}
             #endregion
+
+            #region question15
+
+//            Covariance allows a more specific type to be used where a more general type is expected
+
+//The out keyword is used for covariance in generic interfaces and delegates
+
+//interface IProducer<out T>
+//        {
+//            T Get();
+//        }
+
+        #endregion
     }
     }
 }
