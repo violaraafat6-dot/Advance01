@@ -201,23 +201,89 @@ namespace Advance01
 
             #region question19
 
-//            A class can inherit from a generic class by specifying the type parameter
-//ex
-//class Repository<T>
-//        {
-//            public void Add(T item)
-//            {
-//                Console.WriteLine("Item Added");
-//            }
-//        }
+            //            A class can inherit from a generic class by specifying the type parameter
+            //ex
+            //class Repository<T>
+            //        {
+            //            public void Add(T item)
+            //            {
+            //                Console.WriteLine("Item Added");
+            //            }
+            //        }
 
-//        class UserRepository : Repository<string>
-//        {
-//        }
-//        Now UserRepository inherits from Repository<string>
+            //        class UserRepository : Repository<string>
+            //        {
+            //        }
+            //        Now UserRepository inherits from Repository<string>
 
-//        It can use the methods of the generic base class with string as the type
+            //        It can use the methods of the generic base class with string as the type
             #endregion
-        }
+
+            #region question20
+
+        //    class Cache<TKey, TValue>
+        //{
+        //    private class CacheItem
+        //    {
+        //        public TValue Value { get; set; }
+        //        public DateTime ExpirationTime { get; set; }
+        //    }
+
+        //    private Dictionary<TKey, CacheItem> items =
+        //        new Dictionary<TKey, CacheItem>();
+
+        //    public void Add(TKey key, TValue value, TimeSpan expiration)
+        //    {
+        //        CacheItem item = new CacheItem();
+
+        //        item.Value = value;
+        //        item.ExpirationTime = DateTime.Now.Add(expiration);
+
+        //        items[key] = item;
+        //    }
+
+        //    public TValue Get(TKey key)
+        //    {
+        //        if (!items.ContainsKey(key))
+        //            return default(TValue);
+
+        //        CacheItem item = items[key];
+
+        //        if (DateTime.Now > item.ExpirationTime)
+        //        {
+        //            items.Remove(key);
+        //            return default(TValue);
+        //        }
+
+        //        return item.Value;
+        //    }
+
+        //    public void Remove(TKey key)
+        //    {
+        //        if (items.ContainsKey(key))
+        //        {
+        //            items.Remove(key);
+        //        }
+        //    }
+
+        //    public bool Contains(TKey key)
+        //    {
+        //        if (!items.ContainsKey(key))
+        //            return false;
+
+        //        CacheItem item = items[key];
+
+        //        if (DateTime.Now > item.ExpirationTime)
+        //        {
+        //            items.Remove(key);
+        //            return false;
+        //        }
+
+        //        return true;
+        //    }
+        //}
+
+            #endregion
+    }
     }
 }
