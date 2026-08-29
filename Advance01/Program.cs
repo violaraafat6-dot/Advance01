@@ -66,7 +66,26 @@ namespace Advance01
 
             #endregion
 
+            #region question11
 
-        }
+//            A base class constraint means that the generic type must inherit from a specific base class
+
+//class Animal
+//        {
+//            public void Eat()
+//            {
+//                Console.WriteLine("Eating");
+//            }
+//        }
+
+//        class AnimalContainer<T> where T : Animal
+//        {
+//            public void MakeAnimalEat(T animal)
+//            {
+//                animal.Eat();
+//            }
+//        }
+            #endregion
+    }
     }
 }
