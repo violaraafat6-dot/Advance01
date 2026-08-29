@@ -158,20 +158,29 @@ namespace Advance01
 
             #region question16
 
-//            Contravariance allows a more general type to be used where a more specific type is expected
+            //            Contravariance allows a more general type to be used where a more specific type is expected
 
-//The in keyword is used for contravariance
+            //The in keyword is used for contravariance
 
-//interface IConsumer<in T>
-//        {
-//            void Consume(T item);
-//        }
+            //interface IConsumer<in T>
+            //        {
+            //            void Consume(T item);
+            //        }
 
-//        Here T is used as an input type.
+            //        Here T is used as an input type.
 
-//        For example, a consumer of object can be used where a consumer of string is expected because string is an object
+            //        For example, a consumer of object can be used where a consumer of string is expected because string is an object
 
             #endregion
-    }
+            #region question17
+
+//            Covariance
+//Uses out/ Works with output values / Allows more specific type / Example: IProducer <out T >
+//Contravariance
+//Uses in/ Works with input/ Allows more general type / Example: IConsumer <in T >
+
+//So, covariance is related to producing / returning values, while contravariance is related to consuming / accepting values
+            #endregion
+        }
     }
 }
