@@ -184,20 +184,40 @@ namespace Advance01
 
             #region question18
 
-//            Static members in a generic type are 
-//separate for each closed generic type
+            //            Static members in a generic type are 
+            //separate for each closed generic type
+            //ex
+
+            //class Counter<T>
+            //        {
+            //            public static int Count;
+
+            //            public Counter()
+            //            {
+            //                Count++;
+            //            }
+            //        }
+            #endregion
+
+            #region question19
+
+//            A class can inherit from a generic class by specifying the type parameter
 //ex
-
-//class Counter<T>
+//class Repository<T>
 //        {
-//            public static int Count;
-
-//            public Counter()
+//            public void Add(T item)
 //            {
-//                Count++;
+//                Console.WriteLine("Item Added");
 //            }
 //        }
-        #endregion
-    }
+
+//        class UserRepository : Repository<string>
+//        {
+//        }
+//        Now UserRepository inherits from Repository<string>
+
+//        It can use the methods of the generic base class with string as the type
+            #endregion
+        }
     }
 }
